@@ -1,0 +1,21 @@
+  <% include ./partials/header %>
+  <h1>This is the best fan ice product you could find</h1>
+
+  <% products.forEach(function(product){ %>
+  <div>
+    <h2><%= product.productname %></h2>
+  </div>
+  <div>
+    <img src ="<%= product.image %>" />
+  </div>
+  <div>
+    <p><%= product.description %></p>
+  </div>
+    <span><%= product.postedDate.toDateString() %></span>
+   <p>
+        <a href="/products/<%= product._id %>" class="btn btn-primary">More Info</a>
+    </p>
+
+  <% }); %>
+
+  <% include ./partials/footer %>

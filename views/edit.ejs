@@ -1,0 +1,20 @@
+<% include ./partials/header %>
+<div class="">
+    <div class="">Edit <%= product.name %></div>
+    <form class="" action="/products/<%= product._id %>?_method=PUT" method="POST">
+        <div class="">
+            <label>Title</label>
+            <input type="text" name="product[name]" value="<%= product.name %>">
+        </div>
+        <div class="">
+            <label>Image</label>
+            <input type="text" name="product[image]" value="<%= product.image %>">
+        </div>
+        <div class="">
+            <label>Blog Content</label>
+            <textarea name="product[description]"><%= product.description %></textarea>
+        </div>
+        <input class="" type="submit">
+    </form>
+</div>
+<% include ./partials/footer %>

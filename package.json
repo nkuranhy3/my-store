@@ -1,0 +1,26 @@
+{
+  "name": "the_store",
+  "version": "1.0.0",
+  "description": "the store app build with mongo and express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nkuranhy3/my-store.git"
+  },
+  "author": "Alfred Boateng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nkuranhy3/my-store/issues"
+  },
+  "homepage": "https://github.com/nkuranhy3/my-store#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "mongoose": "^5.0.9"
+  }
+}

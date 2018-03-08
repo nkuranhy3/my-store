@@ -1,0 +1,22 @@
+<% include ./partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= product.image %>">
+                <div class="caption-full">
+                    <h4 class="pull-right">$9.00/night</h4>
+                    <h4><a><%= product.name%></a></h4>
+                    <p><%= product.description %></p>
+                </div>
+            </div>
+            </div>
+        </div>
+        <a class="ui orange basic button" href="/products/<%= product._id %>/edit">Edit</a>
+        <form id="delete" action="/products/<%= product._id %>?_method=DELETE" method="POST">
+                <button class="ui red basic button">Delete</button>
+        </form>
+    </div>
+</div>
+
+<% include ./partials/footer %>
