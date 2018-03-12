@@ -1,13 +1,16 @@
 <% include ./partials/header %>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-9">
+
+        <div style="width: 70%; margin: 25px auto;">
+           <h1 style="text-align: center"><%= product.productname %></h1>
             <div class="thumbnail">
                 <img class="img-responsive" src="<%= product.image %>">
                 <div class="caption-full">
-                    <h4 class="pull-right">$9.00/night</h4>
+                    <h4 class="pull-right">$<%=product.price %></h4>
                     <h4><a><%= product.name%></a></h4>
                     <p><%= product.description %></p>
+                    <span>Posted on <%= product.postedDate.toDateString() %></span>
                 </div>
             </div>
             </div>
@@ -16,6 +19,8 @@
         <form id="delete" action="/products/<%= product._id %>?_method=DELETE" method="POST">
                 <button class="ui red basic button">Delete</button>
         </form>
+
+
     </div>
 </div>
 

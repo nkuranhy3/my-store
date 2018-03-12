@@ -1,33 +1,38 @@
 
 <% include ./partials/header %>
-<div >
-    <div class="">
-        <div class="">New Product</div>
-        <form class="" action="/products" method="POST">
-            <div class="">
-                <label class="">Name</label>
-                <input type="text" name="product[productname]" placeholder="Product name">
-            </div>
-            <div class="">
-                <label class="control-label col-xs-2">Image</label>
-                <input type="text" name="product[image]" placeholder="image">
-            </div>
-            <div class="">
-                <label class="control-label col-xs-2">About Product</label>
-                <textarea name="product[description]"></textarea>
-            </div>
-            <div class="">
-                <div class="">
-                    <button type="submit" class="btn btn-primary">Add</button>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">New Product</h1>
+        <div style="width: 60%; margin: 25px auto;">
+            <form action="/products" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="product[productname]" placeholder="name">
                 </div>
-            </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="product[image]" placeholder="image url">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="product[description]" placeholder="description">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="product[price]" placeholder="price">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Submit!</button>
+                </div>
+            </form>
 
-
-        </form>
+            <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= product[price] %></strong>
+                            <span class="pull-right">10 days ago</span>
+                            <p>
+                                product[description]
+                            </p>
+                        </div>
+                    </div>
+            <a href="/products">Go Back</a>
+        </div>
     </div>
 </div>
-
-
-
 <% include ./partials/footer %>
-
